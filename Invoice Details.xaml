@@ -1,0 +1,341 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Invoice_Details" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="755,3869" sap2010:WorkflowViewState.IdRef="Invoice_Details_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="518,3704" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="StrDoi1" />
+      <Variable x:TypeArguments="x:String" Name="StrAddress1" />
+      <Variable x:TypeArguments="x:String" Name="StrInv1" />
+      <Variable x:TypeArguments="x:String" Name="StrInv2" />
+      <Variable x:TypeArguments="x:String" Name="StrAddress2" />
+      <Variable x:TypeArguments="x:String" Name="StrDoi2" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="476,728" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Invoice38 Chrome_wi'" sap:VirtualizedContainerService.HintSize="434,636" sap2010:WorkflowViewState.IdRef="WindowScope_3" InformativeScreenshot="806b0fb1210d90afb2b435f64e445659" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Invoice #38645 - Google Chrome' /&gt;">
+        <ui:WindowScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetFullText DisplayName="Get Full Text 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_3" IgnoreHidden="False">
+                <ui:GetFullText.Target>
+                  <ui:Target Element="{x:Null}" Id="839a6f2d-0953-415c-a96a-720ded92adbe" InformativeScreenshot="e83ade5819be4d20782ba0cf851815da" Selector="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="412, 290, 85, 32" />
+                    </ui:Target.ClippingRegion>
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetFullText.Target>
+                <ui:GetFullText.Text>
+                  <OutArgument x:TypeArguments="x:String">[StrInv1]</OutArgument>
+                </ui:GetFullText.Text>
+              </ui:GetFullText>
+              <ui:GetFullText DisplayName="Get Full Text 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_4" IgnoreHidden="False">
+                <ui:GetFullText.Target>
+                  <ui:Target Element="{x:Null}" Id="3646fcf3-4c60-48db-88e0-93c39fca1b51" InformativeScreenshot="a70caae96b8a97395a2ed8f0ea9a561d" Selector="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="419, 319, 104, 25" />
+                    </ui:Target.ClippingRegion>
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetFullText.Target>
+                <ui:GetFullText.Text>
+                  <OutArgument x:TypeArguments="x:String">[StrDoi1]</OutArgument>
+                </ui:GetFullText.Text>
+              </ui:GetFullText>
+              <ui:GetFullText DisplayName="Get Full Text 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_5" IgnoreHidden="False">
+                <ui:GetFullText.Target>
+                  <ui:Target Element="{x:Null}" Id="32da9e96-b8ad-4fa2-96e2-6ccbc7455f4e" InformativeScreenshot="f777f4b9a6e95aff92548f0c84ab8896" Selector="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="337, 417, 281, 42" />
+                    </ui:Target.ClippingRegion>
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetFullText.Target>
+                <ui:GetFullText.Text>
+                  <OutArgument x:TypeArguments="x:String">[StrAddress1]</OutArgument>
+                </ui:GetFullText.Text>
+              </ui:GetFullText>
+            </Sequence>
+          </ActivityAction>
+        </ui:WindowScope.Body>
+      </ui:WindowScope>
+    </Sequence>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[StrInv1]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[StrDoi1]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[StrAddress1]" />
+    <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="476,728" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BharatEle Chrome_wi'" sap:VirtualizedContainerService.HintSize="434,636" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="e7530dd8d0fe995fe5e972b9915906de" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BharatElectricals.pdf - Google Chrome' /&gt;">
+        <ui:WindowScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetFullText DisplayName="Get Full Text 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_6" IgnoreHidden="False">
+                <ui:GetFullText.Target>
+                  <ui:Target Element="{x:Null}" Id="8fcf1fe7-45b5-418b-8aba-34c2533598c5" InformativeScreenshot="766040900d89260097475f72780ba5b4" Selector="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="344, 196, 101, 29" />
+                    </ui:Target.ClippingRegion>
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetFullText.Target>
+                <ui:GetFullText.Text>
+                  <OutArgument x:TypeArguments="x:String">[StrInv2]</OutArgument>
+                </ui:GetFullText.Text>
+              </ui:GetFullText>
+              <ui:GetFullText DisplayName="Get Full Text 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_7" IgnoreHidden="False">
+                <ui:GetFullText.Target>
+                  <ui:Target Element="{x:Null}" Id="d6ade6be-d26f-4ec1-9441-59d5a1bd738f" InformativeScreenshot="30728b368b6eab19936e495e8298e756" Selector="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="508, 192, 111, 33" />
+                    </ui:Target.ClippingRegion>
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetFullText.Target>
+                <ui:GetFullText.Text>
+                  <OutArgument x:TypeArguments="x:String">[StrDoi2]</OutArgument>
+                </ui:GetFullText.Text>
+              </ui:GetFullText>
+              <ui:GetFullText DisplayName="Get Full Text 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_8" IgnoreHidden="False">
+                <ui:GetFullText.Target>
+                  <ui:Target Element="{x:Null}" Id="90d3cd1c-0c49-4547-984d-dfe2c0796bd7" InformativeScreenshot="8ee5308e8eec47af4acbe6edb2eba1dc" Selector="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="340, 264, 144, 102" />
+                    </ui:Target.ClippingRegion>
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetFullText.Target>
+                <ui:GetFullText.Text>
+                  <OutArgument x:TypeArguments="x:String">[StrAddress2]</OutArgument>
+                </ui:GetFullText.Text>
+              </ui:GetFullText>
+            </Sequence>
+          </ActivityAction>
+        </ui:WindowScope.Body>
+      </ui:WindowScope>
+    </Sequence>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[StrInv2]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[StrDoi2]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[StrAddress2]" />
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="476,767" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://docs.google.com/forms/d/1VmsLbCFRpEhi-Qf3rGFtjDrg9ODCXf2ZpNW8VqbeEfY/edit">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="418,666" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,574" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="2000" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[StrInv1]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ddb6b5e3-4d82-48d0-8ecd-dac7bfd5ac9b" InformativeScreenshot="745f2cbb907de2dffcf288544abc11da" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' idx='1' parentid='SchemaEditor' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="2000" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[StrDoi1]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6534b6b-6f29-4659-b52f-cdbffbc94b1a" InformativeScreenshot="2167cf6e8dab29df6da5edd8c7f9c8f2" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' idx='2' parentid='SchemaEditor' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="2000" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[StrAddress1]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="979df869-7bf6-4c05-92a4-56dadba31ea4" InformativeScreenshot="c24235a189092a3f6fd74393fcb4a023" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' idx='3' parentid='SchemaEditor' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="476,675" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://docs.google.com/forms/d/1VmsLbCFRpEhi-Qf3rGFtjDrg9ODCXf2ZpNW8VqbeEfY/edit">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,574" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="2000" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[StrInv2]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fc759ef4-2a45-44b0-adab-582f038a25ec" InformativeScreenshot="745f2cbb907de2dffcf288544abc11da" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' idx='1' parentid='SchemaEditor' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="2000" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[StrDoi2]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a4b1808-5098-4458-89b8-1f505aec487f" InformativeScreenshot="2167cf6e8dab29df6da5edd8c7f9c8f2" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' idx='2' parentid='SchemaEditor' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="2000" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[StrAddress2]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="96a8c7a5-f320-45d3-85a1-b37072ebc4ef" InformativeScreenshot="c24235a189092a3f6fd74393fcb4a023" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' idx='3' parentid='SchemaEditor' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>
